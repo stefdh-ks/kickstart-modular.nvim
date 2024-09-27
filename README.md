@@ -12,6 +12,13 @@ A starting point for Neovim that is:
 
 **NOT** a Neovim distribution, but instead a starting point for your configuration.
 
+## Main changes w.r.t starting point
+
+- Added Ruff & pyright LSPs
+- Added F1, F2 to switch between buffers
+- Added F4 to set cwd to directory of currently open buffer
+- Made tab, shift-tab and enter work with autocompletion
+
 ## Installation
 
 ### Install Neovim
