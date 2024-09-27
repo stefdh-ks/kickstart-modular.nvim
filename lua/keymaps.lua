@@ -34,6 +34,17 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Custom by Ruben
+vim.keymap.set('i', 'jj', '<Esc>', { desc = 'jj to escape insert mode' })
+
+vim.keymap.set('i', '<F1>', ':bn<CR>')
+vim.keymap.set('i', '<F2>', ':bp<CR>')
+vim.keymap.set('i', '<F4>', ':cd %:p:h')
+vim.keymap.set('n', '<F1>', ':bn<CR>')
+vim.keymap.set('n', ';', ':')
+vim.keymap.set('n', '<F2>', ':bp<CR>')
+vim.keymap.set('n', '<F4>', ':cd %:p:h')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
