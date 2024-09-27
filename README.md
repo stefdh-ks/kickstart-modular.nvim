@@ -18,6 +18,7 @@ A starting point for Neovim that is:
 - Added F1, F2 to switch between buffers
 - Added F4 to set cwd to directory of currently open buffer
 - Made tab, shift-tab and enter work with autocompletion
+- Bind Telescope.git_files (search current git project's files) to <leader>sp
 
 ## Installation
 
