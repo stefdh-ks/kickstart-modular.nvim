@@ -19,6 +19,9 @@ A starting point for Neovim that is:
 - Added F4 to set cwd to directory of currently open buffer
 - Made tab, shift-tab and enter work with autocompletion
 - Bind Telescope.git_files (search current git project's files) to <leader>sp
+- Add Flash and configure keybinds, make F4 trigger properly
+- Add UndoTree (leader+TU), map neotree to leader+tt (toggle tree)
+- Add barbar (tabs like in any editor)
 
 ## Installation
 
