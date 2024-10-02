@@ -22,6 +22,9 @@ A starting point for Neovim that is:
 - Add Flash and configure keybinds, make F4 trigger properly
 - Add UndoTree (leader+TU), map neotree to leader+tt (toggle tree)
 - Add barbar (tabs like in any editor)
+- Add neogen (documentation generation with <leader>dg)
+- Fix F1, F2, etc in insert mode
+- Adjust conform &lspconfig
 
 ## Installation
 

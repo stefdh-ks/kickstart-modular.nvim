@@ -34,16 +34,29 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Custom by Ruben
+-- General
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'jj to escape insert mode' })
-
-vim.keymap.set('i', '<F1>', ':bn<CR>')
-vim.keymap.set('i', '<F2>', ':bp<CR>')
-vim.keymap.set('i', '<F4>', ':cd %:p:h')
-vim.keymap.set('n', '<F1>', ':bn<CR>')
+vim.keymap.set('i', '<F1>', '<Esc>:bn<CR>i')
+vim.keymap.set('i', '<F2>', '<Esc>:bp<CR>i')
+vim.keymap.set('i', '<F4>', '<Esc>:cd %:p:h<CR>i')
+vim.keymap.set('n', '<F1>', '<Esc>:bn<CR>i')
 vim.keymap.set('n', ';', ':')
 vim.keymap.set('n', '<F2>', ':bp<CR>')
 vim.keymap.set('n', '<F4>', ':cd %:p:h<CR>')
+-- Undotree
 vim.keymap.set('n', '<leader>tu', ':UndotreeToggle<CR>', { desc = '[T]oggle [U]ndotree' })
+-- DOGE
+vim.keymap.set('n', '<leader>dg', ':Neogen<CR>', { desc = '[D]ocumentation [G]enerate' })
+-- Flash
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>f', function()
+  require('flash').jump()
+end, { desc = '[f]lash' })
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>F', function()
+  require('flash').treesitter()
+end, { desc = '[F]lash with treesitter' })
+vim.keymap.set({ 'n', 'x', 'o' }, '<leader>?', function()
+  require('flash').toggle()
+end, { desc = '[F]lash with treesitter' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
