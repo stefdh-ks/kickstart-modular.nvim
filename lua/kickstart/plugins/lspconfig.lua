@@ -183,17 +183,17 @@ return {
             },
           },
         },
-        --ruff = {},
-        --jsonls = {
-        --  settings = {
-        --    json = {
-        --      format = {
-        --        enable = true,
-        --      },
-        --    },
-        --    validate = { enable = true },
-        --  },
-        --},
+        ruff = {},
+        jsonls = {
+          settings = {
+            json = {
+              format = {
+                enable = true,
+              },
+            },
+            validate = { enable = true },
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
