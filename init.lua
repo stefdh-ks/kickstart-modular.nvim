@@ -105,6 +105,9 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+-- [[ Plugin Keymaps ]]
+require 'plugin-keymaps'
+
 -- Set catppuccin colorscheme
 vim.cmd.colorscheme 'catppuccin-mocha'
 
