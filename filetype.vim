@@ -8,4 +8,7 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.svs    setfiletype systemverilog
   au! BufRead,BufNewFile *.svi    setfiletype systemverilog
   au! BufRead,BufNewFile *.svr    setfiletype systemverilog
+
+  au! BufRead,BufNewFile nakfile*    setfiletype ruby
+  au! BufRead,BufNewFile *.nak       setfiletype ruby
 augroup END
