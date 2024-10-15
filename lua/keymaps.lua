@@ -36,40 +36,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Custom by Ruben
 -- General
 vim.keymap.set('i', 'jj', '<Esc>', { desc = 'jj to escape insert mode' })
-vim.keymap.set('i', '<F1>', '<Esc>:bp<CR>')
-vim.keymap.set('i', '<F2>', '<Esc>:bn<CR>i')
+vim.keymap.set('i', '<F1>', '<Esc>:BufferPrevious<CR>')
+vim.keymap.set('i', '<F2>', '<Esc>:BufferNext<CR>')
 vim.keymap.set('i', '<F4>', '<Esc>:cd %:p:h<CR>')
 vim.keymap.set('n', ';', ':')
-vim.keymap.set('n', '<F1>', ':bp<CR>')
-vim.keymap.set('n', '<F2>', ':bn<CR>')
+vim.keymap.set('n', '<F1>', ':BufferPrevious<CR>')
+vim.keymap.set('n', '<F2>', ':BufferNext<CR>')
 vim.keymap.set('n', '<F4>', ':cd %:p:h<CR>')
--- Undotree
-vim.keymap.set('n', '<leader>tu', ':UndotreeToggle<CR>', { desc = '[T]oggle [U]ndotree' })
--- DOGE
-vim.keymap.set('n', '<leader>dg', ':Neogen<CR>', { desc = '[D]ocumentation [G]enerate' })
--- Flash
-vim.keymap.set({ 'n', 'x', 'o' }, '<leader>f', function()
-  require('flash').jump()
-end, { desc = '[f]lash' })
-vim.keymap.set({ 'n', 'x', 'o' }, '<leader>F', function()
-  require('flash').treesitter()
-end, { desc = '[F]lash with treesitter' })
-vim.keymap.set({ 'n', 'x', 'o' }, '<leader>?', function()
-  require('flash').toggle()
-end, { desc = '[F]lash with treesitter' })
-
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
-
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
 
 -- vim: ts=2 sts=2 sw=2 et
